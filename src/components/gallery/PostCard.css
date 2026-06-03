@@ -1,0 +1,109 @@
+.post-card {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  transition: var(--transition-base);
+}
+
+.post-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.post-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(244, 114, 182, 0.1);
+}
+
+.post-card__image {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.post-card:hover .post-card__image {
+  transform: scale(1.08);
+}
+
+.post-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 5, 9, 0.95) 0%, rgba(13, 5, 9, 0.4) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.post-card__overlay--visible {
+  opacity: 1;
+}
+
+.post-card__overlay-content {
+  width: 100%;
+  transform: translateY(10px);
+  transition: var(--transition-base);
+}
+
+.post-card__overlay--visible .post-card__overlay-content {
+  transform: translateY(0);
+}
+
+.post-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.post-card__category {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--pink-300);
+  background: rgba(236, 72, 153, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.post-card__stats {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-card__stat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  padding: 0;
+  font-family: inherit;
+}
+
+.post-card__stat:hover {
+  color: var(--pink-400);
+}
+
+.post-card__stat--liked {
+  color: var(--rose-400);
+}
+
+.post-card__stat--liked svg {
+  animation: scaleIn 0.3s ease;
+}

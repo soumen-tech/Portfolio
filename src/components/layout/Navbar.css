@@ -1,0 +1,109 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.25rem 0;
+  transition: var(--transition-base);
+}
+
+.navbar--scrolled {
+  padding: 0.75rem 0;
+  background: rgba(13, 5, 9, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(244, 114, 182, 0.1);
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1001;
+}
+
+.navbar__logo-icon {
+  color: var(--pink-400);
+  font-size: 1.6rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.navbar__logo-text .text-accent {
+  font-size: 1.6rem;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: var(--transition-base);
+  border-radius: var(--radius-sm);
+}
+
+.navbar__link:hover {
+  color: var(--text-primary);
+  background: rgba(236, 72, 153, 0.08);
+}
+
+.navbar__link--active {
+  color: var(--pink-400);
+}
+
+.navbar__link-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+}
+
+.navbar__toggle {
+  display: none;
+  color: var(--pink-300);
+  z-index: 1001;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar__toggle { display: block; }
+  .navbar__links {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(13, 5, 9, 0.98);
+    backdrop-filter: blur(30px);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-base);
+  }
+  .navbar__links--open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .navbar__link {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}

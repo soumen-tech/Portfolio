@@ -1,0 +1,53 @@
+/* ===== APP LAYOUT ===== */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app__main {
+  flex: 1;
+}
+
+/* ===== PAGE TRANSITIONS ===== */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ===== LOADING SHIMMER ===== */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(236, 72, 153, 0.05) 25%,
+    rgba(236, 72, 153, 0.12) 50%,
+    rgba(236, 72, 153, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ===== GLOBAL GLOW EFFECTS ===== */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.glow-orb--pink {
+  background: var(--pink-500);
+}
+
+.glow-orb--rose {
+  background: var(--rose-400);
+}
