@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import PostDetail from './pages/PostDetail';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import './App.css';
 
@@ -32,7 +31,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/post/:id" element={<PostDetail />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>

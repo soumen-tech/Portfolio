@@ -132,9 +132,78 @@ export const samplePosts = [
 export const categories = ['All', 'Digital Art', 'Illustration', 'Photography', 'Abstract', 'Mixed Media', 'Pattern Design', 'Design', 'Watercolor'];
 
 export const ownerInfo = {
-  name: 'Aria Rose',
+  name: 'Sutrina Bhattacharyya',
   tagline: 'Digital Artist & Creative Designer',
-  bio: "Hi there! I'm Aria, a passionate digital artist and designer who finds beauty in the intersection of technology and organic forms. My work explores color, texture, and emotion through various mediums — from digital illustrations to mixed media compositions. Every piece I create is a story waiting to be discovered.",
+  bio: "Hi there! I'm Sutrina, a passionate digital artist and designer who finds beauty in the intersection of technology and organic forms. My work explores color, texture, and emotion through various mediums — from digital illustrations to mixed media compositions. Every piece I create is a story waiting to be discovered.",
   skills: ['Digital Art', 'Illustration', 'UI/UX Design', 'Photography', 'Watercolor', 'Mixed Media'],
   stats: { posts: 48, followers: '2.4K', likes: '12K' },
+
+  // Professional Details
+  profession: 'Senior Creative Designer & Digital Artist',
+  location: 'San Francisco, CA',
+  email: 'hello@ariarose.art',
+  website: 'www.ariarose.art',
+  availableForWork: true,
+
+  // Social Media
+  socials: {
+    instagram: '@aria.rose.art',
+    instagramUrl: 'https://instagram.com/aria.rose.art',
+    pinterest: '@ariarosecreative',
+    pinterestUrl: 'https://pinterest.com/ariarosecreative',
+    dribbble: '@ariarose',
+    dribbbleUrl: 'https://dribbble.com/ariarose',
+    behance: '@ariaroseart',
+    behanceUrl: 'https://behance.net/ariaroseart',
+  },
+
+  // Work Experience
+  experience: [
+    {
+      role: 'Lead Creative Designer',
+      company: 'PixelCraft Studios',
+      period: '2023 – Present',
+      description: 'Leading a team of 8 designers creating brand identities and digital campaigns for Fortune 500 clients.',
+    },
+    {
+      role: 'Senior Illustrator',
+      company: 'ArtWave Agency',
+      period: '2020 – 2023',
+      description: 'Created 200+ illustrations for editorial, advertising, and product packaging across global markets.',
+    },
+    {
+      role: 'Freelance Digital Artist',
+      company: 'Self-Employed',
+      period: '2017 – 2020',
+      description: 'Built a client base of 50+ brands. Specialized in digital art, mixed media, and brand illustrations.',
+    },
+  ],
+
+  // Education
+  education: [
+    {
+      degree: 'MFA in Digital Arts',
+      school: 'California Institute of the Arts',
+      year: '2017',
+    },
+    {
+      degree: 'BFA in Fine Arts',
+      school: 'Rhode Island School of Design',
+      year: '2015',
+    },
+  ],
+
+  // Awards
+  awards: [
+    { title: 'Adobe Design Achievement Award', year: '2025' },
+    { title: 'Communication Arts Illustration Annual', year: '2024' },
+    { title: 'Society of Illustrators Gold Medal', year: '2023' },
+    { title: 'Behance Portfolio Review Winner', year: '2022' },
+  ],
+
+  // Tools & Software
+  tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Procreate', 'Figma', 'Blender', 'After Effects', 'Cinema 4D', 'Substance Painter'],
+
+  // Languages
+  languages: ['English (Native)', 'Japanese (Conversational)', 'French (Basic)'],
 };

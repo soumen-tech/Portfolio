@@ -1,13 +1,17 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import Masonry from 'react-masonry-css';
 import PostCard from '../components/gallery/PostCard';
 import { samplePosts, categories } from '../data/sampleData';
 import { RiSearchLine, RiFilter3Line } from 'react-icons/ri';
+import { useScrollReveal } from '../hooks/useScrollAnimations';
 import './Gallery.css';
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const pageRef = useRef(null);
+
+  useScrollReveal(pageRef);
 
   const filteredPosts = useMemo(() => {
     let filtered = samplePosts;
@@ -26,7 +30,7 @@ export default function Gallery() {
   const breakpointCols = { default: 4, 1200: 3, 768: 2, 500: 1 };
 
   return (
-    <div className="gallery-page">
+    <div className="gallery-page" ref={pageRef}>
       <section className="gallery-hero">
         <div className="gallery-hero__glow" />
         <div className="container">
@@ -41,7 +45,7 @@ export default function Gallery() {
       <section className="section">
         <div className="container">
           {/* Filters */}
-          <div className="gallery__controls">
+          <div className="gallery__controls" data-scroll="fade-up">
             <div className="gallery__search glass">
               <RiSearchLine className="gallery__search-icon" />
               <input

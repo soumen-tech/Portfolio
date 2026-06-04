@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { RiSparklingFill, RiInstagramLine, RiPinterestLine, RiDribbbleLine, RiHeart2Fill } from 'react-icons/ri';
+import { ownerInfo } from '../../data/sampleData';
 import './Footer.css';
 
 export default function Footer() {
@@ -18,12 +19,11 @@ export default function Footer() {
           <Link to="/" className="footer__link">Home</Link>
           <Link to="/gallery" className="footer__link">Gallery</Link>
           <Link to="/about" className="footer__link">About</Link>
-          <Link to="/contact" className="footer__link">Contact</Link>
         </div>
         <div className="footer__socials">
-          <a href="#" className="btn-icon" aria-label="Instagram"><RiInstagramLine size={18} /></a>
-          <a href="#" className="btn-icon" aria-label="Pinterest"><RiPinterestLine size={18} /></a>
-          <a href="#" className="btn-icon" aria-label="Dribbble"><RiDribbbleLine size={18} /></a>
+          <a href={ownerInfo.socials.instagramUrl} target="_blank" rel="noopener noreferrer" className="btn-icon" aria-label="Instagram"><RiInstagramLine size={18} /></a>
+          <a href={ownerInfo.socials.pinterestUrl} target="_blank" rel="noopener noreferrer" className="btn-icon" aria-label="Pinterest"><RiPinterestLine size={18} /></a>
+          <a href={ownerInfo.socials.dribbbleUrl} target="_blank" rel="noopener noreferrer" className="btn-icon" aria-label="Dribbble"><RiDribbbleLine size={18} /></a>
         </div>
         <div className="footer__bottom">
           <p>Made with <RiHeart2Fill className="footer__heart" /> &copy; {new Date().getFullYear()}</p>
